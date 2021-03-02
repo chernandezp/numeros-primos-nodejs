@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  numeros-primos-node-app:
+    build: .
+    image: numeros-primos-app
+    ports:
+      - '3000:3000'

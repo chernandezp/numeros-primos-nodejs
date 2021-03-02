@@ -6,4 +6,12 @@ Api para obtener listado invertido de números primos entre 2 y el número indic
 localhost:3000/numerosPrimosInvertidos/[numero]
 ```
 
-Se incorporan pruebas unitarias para api
+Se incorporan pruebas unitarias para api, ejecución mediante
+
+```
+npm test
+```
+
+Se incorpora Dockerfile y docker-compose.yml
+
+
