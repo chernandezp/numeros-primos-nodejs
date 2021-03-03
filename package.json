@@ -2,10 +2,11 @@
   "name": "numeros-primos",
   "version": "1.0.0",
   "description": "Api entrega listado de números primos invertido para un número n,",
-  "main": "app.js",
+  "main": "src/index.js",
   "author": "Carlos Hernández",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",

@@ -6,3 +6,6 @@ services:
     image: numeros-primos-app
     ports:
       - '3000:3000'
+    environment:
+      - PORT=8080
+    command: npm run start
