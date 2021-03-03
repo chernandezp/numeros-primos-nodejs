@@ -9,7 +9,7 @@ describe('Numeros primos', () => {
     it('debe entregar el listado invertido de números primos hasta el 7', (done) => {
         var numero = 7;
         chai.request('localhost:3000')
-            .get('/numerosPrimosInvertidos/' + numero)
+            .get('/v1/primos/' + numero)
             .end((err, res) => {
                 res.should.have.status(200)
                 res.text.should.be.a('string');
@@ -26,7 +26,7 @@ describe('Numeros primos', () => {
     it('debe entregar el listado invertido de números primos hasta el 15', (done) => {
         var numero = 15;
         chai.request('localhost:3000')
-            .get('/numerosPrimosInvertidos/' + numero)
+            .get('/v1/primos/' + numero)
             .end((err, res) => {
                 res.should.have.status(200)
                 res.text.should.be.a('string');
@@ -45,7 +45,7 @@ describe('Numeros primos', () => {
     it('debe entregar el listado invertido de números primos hasta el 2 ', (done) => {
         var numero = 2;
         chai.request('localhost:3000')
-            .get('/numerosPrimosInvertidos/' + numero)
+            .get('/v1/primos/' + numero)
             .end((err, res) => {
                 res.should.have.status(200)
                 res.text.should.be.a('string')
@@ -59,7 +59,7 @@ describe('Numeros primos', () => {
     it('debe entregar un string vacío para el número 1 ', (done) => {
         var numero = 1;
         chai.request('localhost:3000')
-            .get('/numerosPrimosInvertidos/' + numero)
+            .get('/v1/primos/' + numero)
             .end((err, res) => {
                 res.should.have.status(200)
                 res.text.should.be.empty
@@ -71,7 +71,7 @@ describe('Numeros primos', () => {
     it('debe entregar error al recibir un número inválido ', (done) => {
         var numero = "numeroInvalido";
         chai.request('localhost:3000')
-            .get('/numerosPrimosInvertidos/' + numero)
+            .get('/v1/primos/' + numero)
             .end((err, res) => {
                 res.should.have.status(400)
                 res.text.should.be.equal("Parámetro no es un número")
